@@ -43,68 +43,89 @@ h4 {
 /* // 오늘의 발견 섹션 영역 */
 
 
-
 /* 상품 이미지카드 위치 조정 */
 .cardWrap {
   padding-top: 2.4rem;
 }
 
-.imgCard a:not(:last-child) {
+/* .imgCard .item:not(:last-child) {
+  margin-right: 1.6rem;
+} */
+.imgCard img:not(:last-child) {
   margin-right: 1.6rem;
 }
 
-.imgCard:nth-child(2) a {
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-.imgCard:nth-child(1) a,
-.imgCard:nth-child(3) a:first-child {
-  outline: 1px solid rgb(242, 4, 4);
+/* .imgCard:nth-child(1) .item,
+.imgCard:nth-child(3) .item:first-child {
+  outline: 1px solid red;
   float: left;
   width: 502px;
   height: 310px;
 }
 
-.imgCard:nth-child(2) a,
-.imgCard:nth-child(3) a:not(:first-child) {
-  outline: 1px solid rgb(156, 148, 4);
+.imgCard:nth-child(2) .item,
+.imgCard:nth-child(3) .item:not(:first-child) {
+  outline: 1px solid blue;
   float: left;
   width: 243px;
   height: 310px;
+} */
+
+/* .imgCard:nth-child(2) .item {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+} */
+
+.imgCard:nth-child(2) img {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 
 /* // 상품 이미지카드 위치 조정 */
 
+.imgCard+ a,
+.imgCard+ a:not() {
+  outline: 1px solid red;
+  float: left;
+  width: 502px;
+  height: 310px;
+
+}
+
+.imgCard:nth-child(2) a,
+.imgCard:nth-child(3) a {
+  outline: 1px solid rgb(156, 148, 4);
+  float: left;
+  width: 243px;
+  height: 310px;
+
+}
+
+
 
 /* 상품 이미지 위치 조정*/
 .imgCard:nth-child(1) img,
-.imgCard:nth-child(3) img:first-child {
-  margin: 20px 28px;
-  display: block;
+.imgCard:nth-child(3) img:not(:first-child) {
+  /* margin: 20px 28px; */
+  /* display: block; */
+
+  /* outline: 1px solid red;
+  float: left;
+  width: 502px;
+  height: 310px; */
 }
 
 .imgCard:nth-child(2) img,
-.imgCard:nth-child(3) a:not(:first-child) img {
-  margin: 14px 22px 14px 23px;
+.imgCard:nth-child(3) img {
+  /* margin: 14px 22px 14px 23px; */
+  /*
+  outline: 1px solid blue;
+  float: left;
+  width: 243px;
+  height: 310px; */
 }
 
-/* // 상품 이미지 위치 조정*/
-
-
-/*  상품링크 */
-.imgCard a {
-  position: relative;
-}
-
-.imgCard span {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-
-}
-
-
+/* // 상품 이미지 */
 
 
 /* // 상품링크 */
