@@ -65,7 +65,8 @@ a:nth-of-type(1) .itemRate,
 a:nth-of-type(4) .itemRate,
 a:nth-of-type(5) .itemRate {
   position: absolute;
-  top: 0;
+  top: -189px;
+  left: -15px;
   padding: 3px 10px;
   width: 5.3rem;
   height: 3rem;
@@ -76,12 +77,14 @@ a:nth-of-type(5) .itemRate {
 }
 
 .itemInfo {
-  margin: 1.2rem 1.4rem;
   font-family: "Noto Sans";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   color: var(---color-black);
+  padding: 0;
+
+  position: relative;
 }
 
 .itemName {
@@ -92,18 +95,12 @@ a:nth-of-type(5) .itemRate {
   /* autoprefixer: off */
 }
 
-.itemShipping {
-  margin: auto 0 0.6rem;
+ul .itemShipping {
+  margin: 1.2rem 0 0.6rem;
 }
 
-.itemShipping+img {
-  margin: auto 0 0.6rem;
-}
-
-.itemInfo {
-  position: relative;
-  display: block;
-  height: 1.2rem;
+ul img {
+  margin: 1.2rem 0 0.6rem;
 }
 
 .ico-star {
@@ -113,14 +110,20 @@ a:nth-of-type(5) .itemRate {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 32%;
   background: url(../../assets/sprites/rating-stars.png) no-repeat;
 }
 
-a:nth-of-type(1) .ico-star,
-a:nth-of-type(2) .ico-star {
-  background-position-y: -126px;
+a:nth-of-type(1) .ico-star {
+  background-position-y: -124px;
+  height: 100%;
+
 }
+a:nth-of-type(2) .ico-star {
+  background-position-y: -124px;
+}
+
+
 
 a:nth-of-type(3) .ico-star,
 a:nth-of-type(5) .ico-star {
@@ -132,9 +135,10 @@ a:nth-of-type(4) .ico-star {
 }
 
 .review-total {
-  margin-left: 7.3rem;
+  /* margin-left: 7.3rem; */
+  margin: 0 0 0 7.3rem;
 }
 
 a:nth-of-type(1) .ico-star {
-  margin-top: -1.5rem;
+  margin-top: -2rem;
 }

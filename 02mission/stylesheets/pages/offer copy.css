@@ -1,11 +1,9 @@
 /* 오늘의 쇼핑 제안 */
 .wrap {
-  outline: 1px solid black;
   margin: 0 auto;
   width: 102.2rem;
   height: 44.2rem;
-  /* margin: 10rem 14.7rem 145.8rem 14.5rem; */
-  margin: 10rem 14.7rem 145.8rem 5rem;
+  margin: 10rem 14.7rem 145.8rem 14.5rem;
 }
 
 .logo {
@@ -21,7 +19,7 @@ section {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.4rem;
 }
 
 h4 p {
@@ -37,12 +35,22 @@ h4 p {
   position: relative;
 }
 
-a {
+.cardWrap a {
   width: 20rem;
   height: 27rem;
-  margin: 0 0 3rem 0.2rem;
-  padding-top: 1.4rem;
+  padding: 1.4rem 1.4rem 1.8rem;
+}
 
+.cardWrap a:not(:first-child) {
+  margin: 0 0.5rem 3rem;
+}
+
+.cardWrap a:first-child {
+  margin: 0 0.5rem 3rem 0.2rem;
+}
+
+.cardWrap a:last-child {
+  margin: 0 0rem 3rem 0.5rem;
 }
 
 a:nth-of-type(4) .itemRate {
@@ -67,76 +75,66 @@ a:nth-of-type(5) .itemRate {
   color: var(--color-white);
 }
 
-
-
-
 .itemInfo {
-
-  margin: 1.2rem 1.4rem 0 1.4rem;
-
+  margin: 1.2rem 1.4rem;
   font-family: "Noto Sans";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   color: var(---color-black);
-
-
-  /* position: relative; */
 }
 
 .itemName {
-  margin-bottom: 1.2rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   /* autoprefixer: off */
-
-
 }
 
+.itemShipping {
+  margin: auto 0 0.6rem;
+}
 
-/* .itemShip { */
+.itemShipping+img {
+  margin: auto 0 0.6rem;
+}
+
 .itemInfo {
   position: relative;
-}
-
-.itemShip {
-  position: relative;
   display: block;
-  width: 8.8rem;
   height: 1.2rem;
 }
 
-.itemShip img {
-  display: block;
-}
-
-/* a:nth-of-type(1) .ico-star { */
 .ico-star {
   position: absolute;
-  top: 0;
+  top: 5rem;
   left: 0;
-
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  background: url(../../assets/sprites/rating-stars.png) no-repeat 2px -125px;
-  height: 120%;
+  height: 100%;
+  background: url(../../assets/sprites/rating-stars.png) no-repeat;
 }
 
-/* a:nth-of-type(1) .ico-star-fill { */
-/* .ico-star-fill { */
-/* position: absolute; */
-/* top: 0; */
-/* left: 0; */
-/* display: block; */
-/* margin: 0.4rem; */
+a:nth-of-type(1) .ico-star,
+a:nth-of-type(2) .ico-star {
+  background-position-y: -126px;
+}
 
-/* height: 100%; */
-/* background: url(../../assets/sprites/rating-stars.png) no-repeat left center; */
+a:nth-of-type(3) .ico-star,
+a:nth-of-type(5) .ico-star {
+  background-position-y: -112px;
+}
 
-/* background-size: contain; */
-/* 별 이미지가 컨테이너에 맞게 조정 */
-/* overflow: hidden; */
-/* 넘치는 부분 숨기기 */
-/* } */
+a:nth-of-type(4) .ico-star {
+  background-position-y: -140px;
+}
+
+.review-total {
+  margin-left: 7.3rem;
+}
+
+a:nth-of-type(1) .ico-star {
+  margin-top: -1.5rem;
+}
