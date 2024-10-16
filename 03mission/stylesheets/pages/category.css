@@ -1,1 +1,37 @@
 /* 카테고리별 추천 광고상품 */
+
+.wrap {
+  outline: 1px solid black;
+  width: 102rem;
+  height: 137.6rem;
+  margin: 10rem 13rem 42rem;
+}
+
+header a {
+  display: block;
+  width: 27.6rem;
+  margin: 0 0 4.8rem 0.9rem;
+}
+
+section span {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+}
+
+section strong,
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+section h4 {
+  display: inline;
+  color: var(--color-blue-600);
+  margin-left: 1rem;
+}
+
+nav {
+  width: 17.4rem;
+  
+}
