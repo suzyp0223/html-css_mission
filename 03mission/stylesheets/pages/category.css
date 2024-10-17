@@ -94,13 +94,131 @@ nav a {
 
 .carousel {
   width: 32rem;
-  height: 63.1rem;
+  /* height: 63.1rem; */
+  height: 100%;
   flex-shrink: 0;
+  position: relative;
+
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  /* hide scrollbar but allow scrolling */
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+
+/* for Chrome, Safari, and Opera */
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 32rem;
+  /* Set the same width as the carousel container */
+  height: 100%;
   position: relative;
 }
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.control {
+  position: relative;
+  top: -40px;
+}
+
+/* 캐러셀 버튼 */
+.control a:nth-of-type(1)::before {
+  content: '';
+  position: absolute;
+  bottom: -3.6rem;
+  left: -17rem;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-700);
+  transition: opacity ease 250ms;
+}
+
+.control a::after {
+  content: '';
+  position: absolute;
+  bottom: -3.6rem;
+  left: -15rem;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-700);
+  transition: opacity ease 250ms;
+}
+
+.control a:hover::before,
+.control a:focus::before {
+  content: '';
+  opacity: 0.5;
+}
+
+/* 캐러셀 버튼2 */
+.control2 {
+  position: relative;
+  top: -40px;
+}
+
+.control2 a::before {
+  content: '';
+  position: absolute;
+  bottom: -3.6rem;
+  left: -49rem;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-700);
+  transition: opacity ease 250ms;
+}
+
+.control2 a::after {
+  content: '';
+  position: absolute;
+  bottom: -3.6rem;
+  left: -47rem;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-700);
+  transition: opacity ease 250ms;
+}
+
+.control2 a:hover::before,
+.control2 a:focus::before {
+  content: '';
+  opacity: 0.5;
+}
+
+
+
+
 
 .carousel-text-box {
   position: absolute;
@@ -116,7 +234,6 @@ nav a {
   line-height: 120%;
   gap: 8px;
 }
-
 
 .carousel-text-box strong {
   font-size: 18px;
@@ -136,13 +253,13 @@ article:nth-of-type(2) .carousel-text-box {
   background: var(--color-green-700);
 }
 
+
 .item-card-wrap {
   height: 63.4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 
 .item-card-wrap li {
   width: 16rem;
