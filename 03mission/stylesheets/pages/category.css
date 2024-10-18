@@ -58,7 +58,15 @@ nav h3 {
   color: var(--color-brown-300);
 }
 
-nav a {
+article:nth-of-type(2) nav h3 {
+  margin: 4.7rem 4.5rem 0.8rem 2.4rem;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-green-700);
+}
+
+
+nav .nav-link a {
   display: block;
   margin: 0 8.8rem 24.8rem 2.4rem;
   background: url(../../assets/icon/angle-right-default.svg) no-repeat right 55%;
@@ -69,29 +77,39 @@ nav a {
 }
 
 .nav-tag {
-  height: 31.3rem;
-  margin: 0 3.6rem 3rem 2.4rem;
+  margin: 0 2rem 3rem 2.4rem;
+  padding: 0.8rem 0.7rem 0 0;
 }
 
-.nav-tag li:first-child {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
+.nav-tag strong {
+  display: block;
   margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.nav-tag li:not(:first-child) {
+.nav-tag li a {
+  display: inline-flex;
+  padding: 0.6rem 1rem;
   font-size: 1.2rem;
   line-height: 1.4rem;
   font-weight: 400;
   text-align: center;
   color: var(--color-brown-300);
-  border: 1px solid var(--color-gray-400);
-  padding: 0.6rem 1rem;
-  margin-bottom: 1.2rem;
-  display: inline-block;
+  outline: 1px solid var(--color-gray-400);
+  margin: 0rem 0.7rem 1.2rem 0;
 }
 
+article:nth-of-type(2) .nav-tag li a {
+  color: var(--color-green-700);
+}
+
+.nav-tag li:last-child a {
+  margin-bottom: 0;
+}
+
+
+/* 캐러셀 */
 .carousel {
   width: 32rem;
   /* height: 63.1rem; */
@@ -118,11 +136,11 @@ nav a {
 }
 
 .carousel li {
-  flex: 0 0 auto;
+  flex: 0 0 100%;
   scroll-snap-align: start;
   width: 32rem;
+
   /* Set the same width as the carousel container */
-  height: 100%;
   position: relative;
 }
 
@@ -177,14 +195,15 @@ nav a {
 /* 캐러셀 버튼2 */
 .control2 {
   position: relative;
-  top: -40px;
 }
 
-.control2 a::before {
+.control2 a:nth-of-type(1)::before {
+  /* .control2::before { */
   content: '';
   position: absolute;
-  bottom: -3.6rem;
-  left: -49rem;
+
+  bottom: 0.4rem;
+  left: -17rem;
   transform: translateX(-50%);
   z-index: 1;
 
@@ -198,8 +217,9 @@ nav a {
 .control2 a::after {
   content: '';
   position: absolute;
-  bottom: -3.6rem;
-  left: -47rem;
+
+  bottom: 0.4rem;
+  left: -15rem;
   transform: translateX(-50%);
   z-index: 1;
 
@@ -215,8 +235,6 @@ nav a {
   content: '';
   opacity: 0.5;
 }
-
-
 
 
 
