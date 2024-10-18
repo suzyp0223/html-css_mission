@@ -1,1 +1,140 @@
 /* 헤더 */
+.wrap {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 102rem;
+  height: 15rem;
+}
+
+
+/* 로그인 바 */
+.login-bar {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.6rem;
+  font-size: 12px;
+  background: var(--color-gray-100);
+}
+
+.login-bar li:nth-of-type(1),
+.login-bar li:nth-of-type(4) {
+  padding: 0.5rem 0.8rem;
+}
+
+.login-bar li:nth-of-type(2),
+.login-bar li:nth-of-type(3),
+.login-bar li:nth-of-type(5) {
+  padding: 0.5rem 0.8rem 0.5rem 0;
+}
+
+.login-bar li:nth-of-type(1) {
+  order: 3;
+  padding-left: 72.8rem;
+}
+
+.login-bar li:nth-of-type(2) {
+  order: 4;
+}
+
+.login-bar li:nth-of-type(3) {
+  order: 5;
+}
+
+.login-bar li:nth-of-type(4) {
+  order: 1;
+}
+
+.login-bar li:nth-of-type(5) {
+  order: 2;
+}
+
+/* // 로그인바 */
+
+
+/* 로고 */
+.logo {
+  outline: 1px solid orangered;
+  display: inline-block;
+  background: url(../../assets/logo/logo.svg) no-repeat;
+  width: 17.6rem;
+  height: 4rem;
+}
+
+/* //로고 */
+/* 45 / 58
+110 216 546 147 */
+/* 카테고리 버튼 */
+.main-contents {
+  /* height: 11.6rem; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr 1.4fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    'category logo     search   info'
+    'category linkList linkList info';
+}
+
+.button--category {
+  grid-area: category;
+  width: 11rem;
+  height: 11.6rem;
+
+}
+
+/* // 카테고리 버튼 */
+
+
+/* 검색 영역 */
+.logo {
+  grid-area: logo;
+}
+
+
+
+/* //검색 영역 */
+
+
+
+/* 검색 영역 */
+form {
+  grid-area: search;
+
+}
+
+.mic-btn {
+  background: url(../../assets/icon/mic.svg) no-repeat;
+  width: 51.6rem;
+  height: 4rem;
+  display: inline;
+}
+
+.keyword-btn {
+  background: url(../../assets/icon/search.svg) no-repeat;
+  width: 4rem;
+  height: 4rem;
+  display: inline;
+}
+
+/* //검색 영역 */
+
+
+/* 마이쿠팡 */
+.myCoupang {
+  grid-area: info;
+
+}
+
+/* // 마이쿠팡 */
+
+
+/* 장바구니 */
+.cart {
+  grid-area: info;
+
+
+}
+
+
+/* //장바구니 */
