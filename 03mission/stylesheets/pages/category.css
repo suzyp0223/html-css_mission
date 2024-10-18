@@ -36,6 +36,7 @@ section h4 {
   margin-left: 1rem;
 }
 
+/* 해시 태그 */
 article {
   height: 63.1rem;
   display: flex;
@@ -64,7 +65,6 @@ article:nth-of-type(2) nav h3 {
   font-weight: 500;
   color: var(--color-green-700);
 }
-
 
 nav .nav-link a {
   display: block;
@@ -107,6 +107,7 @@ article:nth-of-type(2) .nav-tag li a {
 .nav-tag li:last-child a {
   margin-bottom: 0;
 }
+/* // 해시 태그 */
 
 
 /* 캐러셀 */
@@ -174,6 +175,7 @@ article:nth-of-type(2) .nav-tag li a {
   font-weight: 400;
 }
 
+
 /* 캐러셀-인디케이터 */
 .carousel-indicator {
   position: relative;
@@ -205,9 +207,10 @@ article:nth-of-type(2) .nav-tag li a {
   content: '';
   opacity: 0.5;
 }
-
 /* // 캐러셀-인디케이터 */
 
+
+/* 캐러셀 텍스트박스 */
 article:nth-of-type(1) .carousel-text-box {
   background: var(--color-brown-300);
 }
@@ -215,8 +218,10 @@ article:nth-of-type(1) .carousel-text-box {
 article:nth-of-type(2) .carousel-text-box {
   background: var(--color-green-700);
 }
+/* // 캐러셀 텍스트박스 */
 
 
+/* 아이템 카드 */
 .item-card-wrap {
   height: 63.4rem;
   display: flex;
@@ -271,3 +276,4 @@ article:nth-of-type(2) .carousel-text-box {
 .item-info img {
   margin-left: 0.6rem;
 }
+/* // 아이템 카드 */
