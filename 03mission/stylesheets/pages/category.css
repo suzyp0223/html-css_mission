@@ -140,7 +140,6 @@ article:nth-of-type(2) .nav-tag li a {
   scroll-snap-align: start;
   width: 32rem;
 
-  /* Set the same width as the carousel container */
   position: relative;
 }
 
@@ -149,94 +148,6 @@ article:nth-of-type(2) .nav-tag li a {
   height: auto;
   object-fit: cover;
 }
-
-.control {
-  position: relative;
-  top: -40px;
-}
-
-/* 캐러셀 버튼 */
-.control a:nth-of-type(1)::before {
-  content: '';
-  position: absolute;
-  bottom: -3.6rem;
-  left: -17rem;
-  transform: translateX(-50%);
-  z-index: 1;
-
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--color-gray-700);
-  transition: opacity ease 250ms;
-}
-
-.control a::after {
-  content: '';
-  position: absolute;
-  bottom: -3.6rem;
-  left: -15rem;
-  transform: translateX(-50%);
-  z-index: 1;
-
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--color-gray-700);
-  transition: opacity ease 250ms;
-}
-
-.control a:hover::before,
-.control a:focus::before {
-  content: '';
-  opacity: 0.5;
-}
-
-/* 캐러셀 버튼2 */
-.control2 {
-  position: relative;
-}
-
-.control2 a:nth-of-type(1)::before {
-  /* .control2::before { */
-  content: '';
-  position: absolute;
-
-  bottom: 0.4rem;
-  left: -17rem;
-  transform: translateX(-50%);
-  z-index: 1;
-
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--color-gray-700);
-  transition: opacity ease 250ms;
-}
-
-.control2 a::after {
-  content: '';
-  position: absolute;
-
-  bottom: 0.4rem;
-  left: -15rem;
-  transform: translateX(-50%);
-  z-index: 1;
-
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--color-gray-700);
-  transition: opacity ease 250ms;
-}
-
-.control2 a:hover::before,
-.control2 a:focus::before {
-  content: '';
-  opacity: 0.5;
-}
-
-
 
 .carousel-text-box {
   position: absolute;
@@ -262,6 +173,40 @@ article:nth-of-type(2) .nav-tag li a {
   font-size: 14px;
   font-weight: 400;
 }
+
+/* 캐러셀-인디케이터 */
+.carousel-indicator {
+  position: relative;
+  top: -40px;
+}
+
+.carousel-indicator a:nth-of-type(1)::before,
+.carousel-indicator a:nth-of-type(2)::before {
+  content: '';
+  position: absolute;
+  bottom: -3.6rem;
+  left: -17rem;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-700);
+  transition: opacity ease 250ms;
+}
+
+.carousel-indicator a:nth-of-type(2)::before {
+  left: -15rem;
+}
+
+.carousel-indicator a:hover::before,
+.carousel-indicator a:focus::before {
+  content: '';
+  opacity: 0.5;
+}
+
+/* // 캐러셀-인디케이터 */
 
 article:nth-of-type(1) .carousel-text-box {
   background: var(--color-brown-300);
