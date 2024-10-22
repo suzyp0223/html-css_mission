@@ -44,21 +44,16 @@
 
 
       <!-- 검색 영역 -->
-      <form action="/" class="search-form">
-        <label for="search-item"></label>
-        <select name="search" id="search-item">
-          <option value="goods">전체</option>
-          <option value="goods">의류</option>
-          <option value="goods">식품</option>
-          <option value="goods">생활</option>
-        </select>
-        <div class="search-svg">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="IconMoreDown">
-              <path id="MoreDown" d="M24 17H15L19.6957 23L24 17Z" fill="#767676" />
-            </g>
-          </svg>
-        </div>
+      <form action="#" class="search-form">
+        <label for="search-item">
+          <select name="search" id="search-item">
+            <option value="">전체</option>
+            <option value="clothes">의류</option>
+            <option value="foods">식품</option>
+            <option value="life">생활</option>
+          </select>
+        </label>
+        <img src="./assets/icon/IconMoreDown.svg" alt="더보기화살표">
         <input class="search-input" type="text" placeholder="찾고 싶은 상품을 검색해 보세요!" />
         <button class="mic-btn" type="button"></button>
         <button class="keyword-btn" type="button"></button>
@@ -90,8 +85,12 @@
       <div class="cart is-product">
         <span class="cart-num">2</span>
         <ul class="cart-txt-box">
-          <li><a href="/"><p>불가리 스플랜디다 로즈 EDP 50ml, 100ml</p></a></li>
-          <li><a href="/"><p>Apple 2021 맥북프로16, 실버, M1 Pro 10코어, GPU 32코어, 32GB, 1TBSSD</p></a></li>
+          <li><a href="/">
+              <p>불가리 스플랜디다 로즈 EDP 50ml, 100ml</p>
+            </a></li>
+          <li><a href="/">
+              <p>Apple 2021 맥북프로16, 실버, M1 Pro 10코어, GPU 32코어, 32GB, 1TBSSD</p>
+            </a></li>
           <li><a href="/">장바구니 전체보기</a></li>
         </ul>
       </div>

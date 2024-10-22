@@ -46,7 +46,8 @@ a {
   text-decoration: none;
 }
 
-a img {
+a,
+img {
   vertical-align: middle;
 }
 
@@ -99,9 +100,15 @@ fieldset {
   border: 0 none;
 }
 
+/*익스플로러 기본 화살표 없애기*/
+select::-ms-expand {
+  display: none;
+}
+
+/*화살표 기본 css 없애기*/
 select {
   border-radius: 0;
-  appearance: none;
+  -o-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

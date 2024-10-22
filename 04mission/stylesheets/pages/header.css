@@ -94,24 +94,27 @@
   display: flex;
   outline: 1px solid var(--color-blue-600);
   margin: 2.3rem 0rem 0rem 3rem;
+
+  position: relative;
+
 }
 
-select {
+/* 셀렉트 */
+.search-form select {
+  outline: none;
+  box-shadow: none;
+  margin: 0;
   width: 13.5rem;
   border-right: 1px solid var(--color-gray-100);
   padding: 1.3rem 4.6rem 1.3rem 1.2rem;
   font-size: 12px;
 }
 
-.search-svg {
-  position: relative;
-  display: inline;
-}
-
-.search-svg svg {
+.search-form img {
   position: absolute;
   top: 0px;
-  left: -4.6rem;
+  left: 10rem;
+  pointer-events: none;
 }
 
 .search-form input {
@@ -162,6 +165,8 @@ select {
   position: absolute;
   bottom: -1.3rem;
   left: -2.7rem;
+
+  visibility: hidden;
 }
 
 .link-box {
@@ -239,7 +244,7 @@ select {
   line-height: normal;
 
   background-color: white;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .cart-txt-box::before {
@@ -257,12 +262,13 @@ select {
   right: 4%;
 }
 
+.is-product {
+  visibility: hidden;
+}
 .is-product .cart-txt-box {
   width: 28.8rem;
   height: 21.8rem;
   flex-wrap: wrap;
-
-  /* visibility: hidden; */
 }
 
 .is-product li {
