@@ -58,11 +58,9 @@
   background: url(../../assets/logo/logo.svg) no-repeat;
   width: 17.6rem;
   height: 4rem;
-
   margin: 2.3rem 0 0 4rem;
 }
 
-/* //로고 */
 
 /* 카테고리 버튼 */
 .main-contents {
@@ -82,15 +80,11 @@
   width: 11rem;
   text-align: center;
   height: 11.2rem;
+  line-height: 12.5;
   color: var(--color-white);
   background: url(../../assets/icon/hamburger.svg) no-repeat 50% 30% var(--color-blue-600);
+  font-size: 1.2rem;
 }
-
-.button--category p {
-  margin-top: 4rem;
-}
-
-
 
 /* 검색 영역 */
 .search-form {
@@ -145,7 +139,6 @@ select {
 }
 
 
-
 /* 마이쿠팡 */
 .myCoupang {
   grid-area: info;
@@ -197,7 +190,6 @@ select {
 }
 
 
-
 /* 장바구니 */
 .cart {
   grid-area: info;
@@ -235,7 +227,6 @@ select {
   position: absolute;
   top: 7.1rem;
   right: 0.8rem;
-
   outline: 1px solid var(--color-gray-300);
   width: 28.8rem;
   height: 9.9rem;
@@ -307,7 +298,6 @@ select {
   padding: 2rem 9rem;
   background: var(--color-gray-100);
 }
-
 
 
 /* 링크 바 */
