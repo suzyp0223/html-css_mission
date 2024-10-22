@@ -145,42 +145,47 @@
 /* 마이쿠팡 */
 .myCoupang {
   grid-area: info;
-  background: url(../../assets/icon/my-coupang.svg) no-repeat;
-  width: 4.6rem;
-  height: 19.5rem;
   font-size: 1.2rem;
-  line-height: 120%;
+  line-height: 3;
 
-  margin: 2.3rem 1.4rem 0 4.3rem;
   position: relative;
+  width: 4.6rem;
+  /* align-self: center; */
 }
 
 .myCoupang-btn {
   position: absolute;
-  top: 4.5rem;
+  top: 2.7rem;
+  left: -10px;
+  user-select: none;
+  background: url(../../assets/icon/my-coupang.svg) no-repeat 50% 0rem;
+  /* width: 4.6rem; */
+  height: 9.8rem;
 }
 
 .myCoupang-box {
   outline: 1px solid var(--color-gray-300);
   position: absolute;
-  bottom: -1.3rem;
-  left: -2.7rem;
+  bottom: -11rem;
+  left: -3.5rem;
 
-  visibility: hidden;
+  width: 9rem;
+  background-color: var(--color-white);
+  height: 13.7rem;
+  text-align: center;
+  padding: 1.5rem 1.4rem;
+  display: none;
 }
 
-.link-box {
-  width: 9rem;
-  height: 13.7rem;
-  background-color: var(--color-white);
-
+.is--active .myCoupang-box {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
 
-.link-box::before {
+/* .is--active .myCoupang-box::before { */
+.myCoupang-box::before {
   content: '';
   border: 1px solid var(--color-gray-300);
   border-top: 0;
@@ -191,7 +196,7 @@
   width: 0.8rem;
   height: 0.8rem;
   top: -0.5rem;
-  left: 48%;
+  left: 45%;
 }
 
 
@@ -199,11 +204,9 @@
 .cart {
   grid-area: info;
   background: url(../../assets/icon/cart.svg) no-repeat;
-  width: 4.6rem;
-  height: 5.8rem;
   font-size: 12px;
-  line-height: 120%;
   margin: 2.3rem 0 0 10rem;
+  line-height: 6;
 
   position: relative;
 }
@@ -222,30 +225,31 @@
   background-color: var(--color-blue-600);
 }
 
+
+
 .cart-btn {
   position: absolute;
-  top: 4.5rem;
-  left: 0.1rem;
+  top: 1.7rem;
 }
 
 .cart-txt-box {
   position: absolute;
   top: 7.1rem;
-  right: 0.8rem;
+  right: 1.8rem;
   outline: 1px solid var(--color-gray-300);
-  width: 28.8rem;
-  height: 9.9rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 20rem;
   font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-
   background-color: white;
-  visibility: hidden;
+  text-align: center;
+  padding: 1.5rem 4rem;
+
+  display: none;
 }
+
+.cart--empty .cart-txt-box {
+  display: flex;
+}
+
 
 .cart-txt-box::before {
   content: '';
@@ -262,10 +266,29 @@
   right: 4%;
 }
 
+/* 상품이 담겼을때 */
+/* .cart-num:hover .is--product,
+.cart-num:focus .is--product{
+  position: absolute;
+  top: 0.1rem;
+  right: 0.7rem;
+  text-align: center;
+
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-blue-600);
+} */
+
 .is-product {
-  visibility: hidden;
+  display: none;
 }
-.is-product .cart-txt-box {
+
+
+.is-product
+.cart-txt-box {
   width: 28.8rem;
   height: 21.8rem;
   flex-wrap: wrap;
