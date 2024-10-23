@@ -50,19 +50,116 @@ header button:focus {
 /* 내비게이션                                        */
 /* ---------------------------------------------- */
 .navigation {
-  margin: 0 auto;
   outline: 1px solid rebeccapurple;
+
   /* margin: 11.7rem 45rem 5.1rem; */
   margin: 1.7rem 5rem 5.1rem;
-
   width: 54rem;
   height: 50rem;
-  padding: 0rem 48rem 2rem 0rem;
+  padding: 0rem 48rem 0rem 0rem;
 
   display: flex;
-  align-items: center;
-  /* flex-shrink: 0; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  position: relative;
 }
+
+/* 내비게이션 리스트 ul 배치 */
+.navigation__inner ul {
+  outline: 1px solid rgb(0, 128, 38);
+  padding: 1rem 0.5rem;
+
+  position: absolute;
+  top: 0;
+  width: 18rem;
+  /* height: inherit; */
+  font-size: 12px;
+}
+
+.navigation__inner .dep1-ul {
+  left: 0;
+}
+
+.navigation__inner .dep2-ul {
+  left: 18.1rem;
+}
+
+.navigation__inner .dep3-ul {
+  left: 18.1rem;
+}
+
+/* 내비게이션 리스트 li */
+.ico-clothes {
+  color: var(--color-blue-600);
+}
+
+.navigation__inner li .arrow,
+.navigation__inner .dep3-ul li:first-child {
+  font-weight: 700;
+  color: var(--color-blue-600);
+  /* display: block; */
+}
+
+/* .navigation__list .dep1-link { */
+.navigation__list .dep1-li {
+  outline: 1px solid orchid;
+
+  width: 17rem;
+  height: 3rem;
+  gap: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* .navigation__list .dep1-li a {
+  padding: 0.1rem 0 0.1rem 2rem;
+  display: block;
+} */
+
+.navigation__list .dep1-link {
+  /* .navigation__list li { */
+  /* display: block; */
+  padding: 0.1rem 0rem 0.1rem 2rem;
+}
+
+/* 2depth */
+/* .navigation__list .dep1-li, */
+/* .navigation__list .dep2-li,
+.navigation__list .dep3-li {
+  display: block;
+} */
+
+/* .navigation__list .dep1-li a {
+  outline: 1px solid orchid;
+
+  width: 17rem;
+  height: 3rem;
+  gap: 4px;
+  align-items: center;
+} */
+
+
+.navigation__list .dep2-li a,
+.navigation__list .dep3-li a {
+  display: flex;
+  height: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  /* padding: 0.1rem 0.1rem 0.1rem 2rem; */
+
+  /* height: 2.8rem;
+  margin: 0.2rem 0; */
+
+}
+
+
+
+/* 3depth */
+
 
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
