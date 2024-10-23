@@ -1,3 +1,91 @@
-/* ---------------------------------------------- */
-/* Icon Font                                      */
-/* ---------------------------------------------- */
+@font-face {
+  font-family: 'icon';
+  /* src: url('../../assets/fonts/icon.eot?hxplex'); */
+  src: url('../../assets/fonts/icon.eot');
+  src: url('../../assets/fonts/icon.eot?hxplex#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/icon.ttf?hxplex') format('truetype'),
+    url('../../assets/fonts/icon.woff?hxplex') format('woff'),
+    url('../../assets/fonts/icon.svg?hxplex#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-appliances:before {
+  content: "\e900";
+}
+
+.ico-baby:before {
+  content: "\e901";
+}
+
+.ico-beauty:before {
+  content: "\e902";
+}
+
+.ico-book:before {
+  content: "\e903";
+}
+
+.ico-car:before {
+  content: "\e904";
+}
+
+.ico-clothes:before {
+  content: "\e905";
+}
+
+.ico-foods:before {
+  content: "\e906";
+}
+
+.ico-houseware:before {
+  content: "\e907";
+}
+
+.ico-interior:before {
+  content: "\e908";
+}
+
+.ico-kitchenware:before {
+  content: "\e909";
+}
+
+.ico-pet:before {
+  content: "\e90a";
+}
+
+.ico-sports:before {
+  content: "\e90b";
+}
+
+.ico-stationery:before {
+  content: "\e90c";
+}
+
+.ico-theme:before {
+  content: "\e90d";
+}
+
+.ico-toy:before {
+  content: "\e90e";
+}
+
+.ico-travel:before {
+  content: "\e90f";
+}
