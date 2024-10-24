@@ -1,7 +1,5 @@
 /* 카테고리별 추천 광고상품 */
-
 .wrap {
-  outline: 1px solid black;
   /* width: 112rem; */
   width: 102rem;
   height: 148rem;
@@ -46,6 +44,11 @@ article {
 
 article:nth-of-type(1) {
   margin-bottom: 2.4rem;
+}
+
+article:nth-of-type(2) {
+  border-top: 1px solid var(--color-green-700);
+  border-bottom: 1px solid var(--color-green-700);
 }
 
 nav {
@@ -99,7 +102,11 @@ nav .nav-link a {
   outline: 1px solid var(--color-gray-400);
   margin: 0rem 0.7rem 1.2rem 0;
 }
+.nav-tag li a:hover,
+.nav-tag li a:focus {
+  outline: 1px solid var(--color-black);
 
+}
 article:nth-of-type(2) .nav-tag li a {
   color: var(--color-green-700);
 }
@@ -107,7 +114,6 @@ article:nth-of-type(2) .nav-tag li a {
 .nav-tag li:last-child a {
   margin-bottom: 0;
 }
-/* // 해시 태그 */
 
 
 /* 캐러셀 */
@@ -207,7 +213,6 @@ article:nth-of-type(2) .nav-tag li a {
   content: '';
   opacity: 0.5;
 }
-/* // 캐러셀-인디케이터 */
 
 
 /* 캐러셀 텍스트박스 */
@@ -218,7 +223,6 @@ article:nth-of-type(1) .carousel-text-box {
 article:nth-of-type(2) .carousel-text-box {
   background: var(--color-green-700);
 }
-/* // 캐러셀 텍스트박스 */
 
 
 /* 아이템 카드 */
@@ -276,4 +280,3 @@ article:nth-of-type(2) .carousel-text-box {
 .item-info img {
   margin-left: 0.6rem;
 }
-/* // 아이템 카드 */
