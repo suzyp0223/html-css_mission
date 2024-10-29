@@ -77,20 +77,6 @@ header button:focus {
   height: 100%;
 }
 
-/* 그림자 라인 */
-.navigation__inner .dep2-ul::before,
-.navigation__inner .dep3-ul::before {
-  content: '';
-  position: absolute;
-  border-top: 1px solid var(--color-gray-100);
-  width: 17.5rem;
-
-  /* 100%에서 위,아래 1rem씩 뺀 2rem을 제외한 height크기
-  height: calc(100% - 2rem);*/
-  height: 100%;
-  top: 0;
-  box-shadow: -1px 0 2px var(--color-opacity-20);
-}
 
 
 /* 네이게이션 js  */
@@ -123,8 +109,7 @@ header button:focus {
   color: var(--color-blue-600);
 }
 
-.navigation__inner li .arrow,
-.navigation__inner .dep3-ul li:first-child {
+.navigation__inner li .arrow {
   font-weight: 700;
   color: var(--color-blue-600);
 }
@@ -161,7 +146,20 @@ header button:focus {
   padding: 0.5rem 0rem 0.5rem 2rem;
   width: 15rem;
 }
+/* 그림자 라인 */
+.navigation__inner .dep2-ul::before,
+.navigation__inner .dep3-ul::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid var(--color-gray-100);
+  width: 0.1rem;
 
+  /* 100%에서 위,아래 1rem씩 뺀 2rem을 제외한 height크기
+  height: calc(100% - 2rem);*/
+  height: 100%;
+  top: 0;
+  box-shadow: -1px 0 2px var(--color-opacity-20);
+}
 
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
