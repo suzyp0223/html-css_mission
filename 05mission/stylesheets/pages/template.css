@@ -96,12 +96,22 @@ header button:focus {
   display: block;
 }
 
+.dep1-link.is--active,
+.dep1-link:focus,
+.dep2-link.is--active,
+.dep2-link:focus {
+  color: var(--color-blue-600);
+  font-weight: 700;
+  background: url(../../assets/icon/more-right-active.svg) no-repeat 95% 50%;
+}
+
 .dep3-link:hover,
 .dep3-link:focus {
   color: var(--color-blue-600);
   font-weight: 700;
   text-decoration: underline;
 }
+
 
 
 /* 내비게이션 리스트 li */
@@ -114,9 +124,6 @@ header button:focus {
   color: var(--color-blue-600);
 }
 
-.navigation__inner li .arrow {
-  background: url(../../assets/icon/more-right-active.svg) no-repeat 95% 50%;
-}
 
 .navigation__list .dep1-li {
   width: 18rem;
