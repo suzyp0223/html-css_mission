@@ -40,6 +40,7 @@ h4 {
   font-weight: 500;
   line-height: 1.6rem;
 }
+
 /* // 오늘의 발견 섹션 영역 */
 
 
@@ -80,6 +81,7 @@ h4 {
 .imgCard:nth-child(3) a:focus {
   outline: 1px solid var(--color-blue-600);
 }
+
 /* // 상품 이미지카드 위치 조정 */
 
 
@@ -94,6 +96,7 @@ h4 {
 .imgCard:nth-child(3) a:not(:first-child) img {
   margin: 14px 22px 14px 23px;
 }
+
 /* // 상품 이미지 위치 조정*/
 
 
@@ -103,7 +106,7 @@ h4 {
   position: relative;
 }
 
-.imgCard span::before {
+.imgCard a::before {
   content: '';
   position: absolute;
   left: 20px;
@@ -114,7 +117,7 @@ h4 {
 }
 
 /* 구매하기 버튼*/
-.imgCard span::after {
+.imgCard a::after {
   content: '구매하기';
   position: absolute;
   left: 20px;
@@ -135,11 +138,14 @@ h4 {
   /* opacity와 visibility에 대해 애니메이션 적용 */
 }
 
-.imgCard span:hover::after,
-.imgCard span:focus::after {
+.imgCard a:hover::after,
+.imgCard a:focus::after {
+  /* .imgCard::after,
+.imgCard::after { */
   opacity: 1;
   /* 마우스를 올렸을 때 완전히 보이게 */
   visibility: visible;
   /* 마우스를 올렸을 때 보이게 */
 }
+
 /* //구매하기 버튼*/
