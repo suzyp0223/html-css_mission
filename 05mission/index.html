@@ -20,7 +20,7 @@
     <!-- 헤더 영역 -->
     <h1 class="sr-only">Coupang</h1>
     <div class="header__inner">
-      <button class="button--category" type="button" tabindex="1">
+      <button class="button--category" type="button">
         <img src="./assets/icon/hamburger.svg" alt="카테고리 버튼" />
         카테고리
       </button>
@@ -36,25 +36,28 @@
       <!-- 카테고리별 내비게이션(메뉴) 영역 -->
       <ul class="navigation__list dep1-ul">
         <!-- 1depth -->
-        <li class="dep1-li" tabindex="2">
-          <a class="dep1-link arrow" id="clothes" role="button" aria-controls="tab_ui">
+        <li class="dep1-li">
+          <a class="dep1-link arrow" id="clothes" role="button" tabindex="0" aria-expanded="false"
+            aria-controls="fashion">
             <i class="ico-clothes"></i>
             패션의류/잡화</a>
 
           <!-- 2depth -->
-          <ul class="dep2-ul">
-            <li class="dep2-li" id="tab_ui" tabindex="3">
-              <a class="dep2-link arrow" href="#clothes" role="button">여성패션</a>
+          <ul class="dep2-ul" id="fashion">
+            <li class="dep2-li">
+              <a class="dep2-link arrow" href="#clothes" role="button" tabindex="0" aria-expanded="false"
+                aria-controls="womanFashion">여성패션</a>
               <!-- 3depth -->
-              <ul class="dep3-ul">
-                <li class="dep3-li" tabindex="4">
-                  <a class="dep3-link" href="#clothes" role="button">의류</a>
+              <ul class="dep3-ul is--active" id="womanFashion">
+              <!-- <ul class="dep3-ul " id="womanFashion"> -->
+                <li class="dep3-li">
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">의류</a>
                 </li>
-                <li class="dep3-li" tabindex="5">
-                  <a class="dep3-link" href="#clothes" role="button">속옷/잠옷</a>
+                <li class="dep3-li">
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">속옷/잠옷</a>
                 </li>
-                <li class="dep3-li" tabindex="6">
-                  <a class="dep3-link" href="#clothes" role="button">신발</a>
+                <li class="dep3-li">
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">신발</a>
                 </li>
               </ul>
 
@@ -62,36 +65,36 @@
 
 
             <!-- 2depth -->
-            <li class="dep2-li" tabindex="7">
-              <a class="dep2-link" href="#clothes" role="button">남성패션</a>
+            <li class="dep2-li">
+              <a class="dep2-link" href="#clothes" role="button" tabindex="-1" aria-controls="manFashion">남성패션</a>
               <!-- 3depth -->
-              <!-- <ul class="dep3-ul">
+              <!-- <ul class="dep3-ul" id="manFashion">
                 <li class="dep3-li">
-                  <a class="dep3-link" href="#clothes" role="button">의류</a>
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">정장</a>
                 </li>
                 <li class="dep3-li">
-                  <a class="dep3-link" href="#clothes" role="button">속옷/잠옷</a>
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">셔츠</a>
                 </li>
                 <li class="dep3-li">
-                  <a class="dep3-link" href="#clothes" role="button">신발</a>
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">구두</a>
                 </li>
               </ul> -->
             </li>
 
 
             <!-- 2depth -->
-            <li class="dep2-li" tabindex="8">
-              <a class="dep2-link" href="#clothes" role="button">유아동패션</a>
+            <li class="dep2-li">
+              <a class="dep2-link" href="#clothes" role="button" tabindex="-1" aria-controls="babyFashion">유아동패션</a>
               <!-- 3depth -->
-              <!-- <ul class="dep3-ul">
+              <!-- <ul class="dep3-ul" id="babyFashion">
                 <li class="dep3-li">
-                  <a class="dep3-link" href="#clothes" role="button">의류</a>
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">모자</a>
                 </li>
                 <li class="dep3-li">
-                  <a class="dep3-link" href="#clothes" role="button">속옷/잠옷</a>
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">속싸개</a>
                 </li>
                 <li class="dep3-li">
-                  <a class="dep3-link" href="#clothes" role="button">신발</a>
+                  <a class="dep3-link" href="#clothes" role="button" tabindex="-1">우주복</a>
                 </li>
               </ul> -->
             </li>
@@ -99,77 +102,77 @@
           </ul>
         </li>
 
-        <li class="dep1-li" tabindex="9">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-beauty"></i>
             뷰티</a>
         </li>
-        <li class="dep1-li" tabindex="10">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-baby"></i>
             출산유아동</a>
         </li>
-        <li class="dep1-li" tabindex="11">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-foods"></i>
             식품</a>
         </li>
-        <li class="dep1-li" tabindex="12">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-kitchenware"></i>
             주방용품</a>
         </li>
-        <li class="dep1-li" tabindex="13">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-houseware"></i>
             생활용품</a>
         </li>
-        <li class="dep1-li" tabindex="14">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-interior"></i>
             홈인테리어</a>
         </li>
-        <li class="dep1-li" tabindex="15">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-appliances"></i>
             가전디지털</a>
         </li>
-        <li class="dep1-li" tabindex="16">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-sports"></i>
             스포츠</a>
         </li>
-        <li class="dep1-li" tabindex="17">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-car"></i>
             자동차용품</a>
         </li>
-        <li class="dep1-li" tabindex="18">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-book"></i>
             도서음반</a>
         </li>
-        <li class="dep1-li" tabindex="19">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-toy"></i>
             완구취미</a>
         </li>
-        <li class="dep1-li" tabindex="20">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-stationery"></i>
             문구오피스</a>
         </li>
-        <li class="dep1-li" tabindex="21">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-pet"></i>
             반려동물</a>
         </li>
-        <li class="dep1-li" tabindex="22">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-travel"></i>
             여행티켓</a>
         </li>
-        <li class="dep1-li" tabindex="23">
+        <li class="dep1-li">
           <a class="dep1-link" href="/">
             <i class="ico-theme"></i>
             테마관
@@ -177,8 +180,8 @@
           </a>
         </li>
 
-
       </ul>
+
     </div>
   </nav>
 
@@ -190,26 +193,49 @@
   <footer class="footer">
     <!-- 푸터 영역 -->
     <!-- 푸터 관련 콘텐츠는 .footer 영역 안에 마크업 해주세요. -->
-    <div class="footer-link">
-      <p><a href="/">인재채용</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">입점 / 제휴문의</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">공지사항</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">고객의 소리</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/"><strong>개인정보 처리방침</strong></a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">쿠팡페이 이용약관</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/"><strong>쿠팡페이 개인정보 처리방침</strong></a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">신뢰관리센터</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">제휴마케팅</a></p>
-      <span class="divider" aria-hidden="true"></span>
-      <p><a href="/">광고안내</a></p>
+    <div>
+      <ul class="footer-link">
+        <li class="footer-link-inner">
+          <!-- <span class="divider" aria-hidden="true"></span> -->
+          <a href="/">인재채용</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">입점 / 제휴문의</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">공지사항</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">고객의 소리</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/"><strong>개인정보 처리방침</strong></a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">쿠팡페이 이용약관</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/"><strong>쿠팡페이 개인정보 처리방침</strong></a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">신뢰관리센터</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">제휴마케팅</a>
+        </li>
+        <li class="footer-link-inner">
+          <span class="divider" aria-hidden="true"></span>
+          <a href="/">광고안내</a>
+        </li>
+      </ul>
     </div>
 
     <div class="footer-info">
@@ -223,12 +249,53 @@
         <li>사업자 등록번호 : 120-88-00767</li>
         <li>통신판매업신고 : 2017-서울송파-0680</li>
       </ul>
+      <!--
+      고객 정보 목록
+      <ul class="coupangInformation__list">
+        <li class="coupangInformation__item">
+          <span role="text">상호명 및 호스팅 서비스 제공 <span aria-hidden="true"> : </span>쿠팡(주)</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text">대표이사<span aria-hidden="true"> : </span>강한송, 박태준</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text"><span class="sr-only">주소</span>서울시 송파구 송파대로 570</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text">사업자 등록번호<span aria-hidden="true"> : </span>120-88-00767</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text">통신판매업신고<span aria-hidden="true"> : </span>2017-서울송파-0680</span>
+        </li>
+      </ul>
+      -->
+
       <ul class="address">
-        <li><strong>365고객센터</strong></li>
+        <li><a href="/">365고객센터</a></li>
         <li class="divider" aria-hidden="true"></li>
-        <li>전자금융거래분쟁처리담당</li>
-        <li><a href="tel:1577-7011">1577-7011</a></li>
+        <li><a href="/">전자금융거래분쟁처리담당</a></li>
         <li>
+          <span class="sr-only">대표 전화번호</span>
+          <a href="tel:1577-7011">1577-7011</a>
+        </li>
+        <li>
+
+
+          <!-- 주소 -->
+          <div class="address" role="text">
+            <span class="sr-only">주소</span>서울 종로구 세종대로 172
+          </div>
+          <!-- 전화번호 -->
+          <div class="tel">
+            <span class="sr-only">대표 전화번호</span>
+            <a href="tel:1577-7011">1234-5678</a>
+          </div>
+          <!-- 이메일 -->
+          <div>
+            email <span aria-hidden="true"> : </span>
+            <a href="mailto:abc@abc.com?subject=문의사항" target="_blank" rel="noopener">email : abc@abc.com</a>
+          </div>
+
           <address>서울시 송파구 송파대로 570</address>
         </li>
         <li><a href="mailto:help@coupang.com?subject=문의사항" target="_blank" rel="noopener">email : help@coupang.com</a>
@@ -250,7 +317,7 @@
         마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다.<br>
         쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.<br>
         쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁처리절차에 의거 분쟁이 처리됩니다.<br>
-        Copyright ⓒ Coupang Corp. 2010-2020 All Right Reserved.
+        <small>Copyright &copy; Coupang Corp. 2010-2020 All Right Reserved.</small>
       </li>
       <li>
         <a href="https://www.facebook.com/" target="_blank" rel="noopener">

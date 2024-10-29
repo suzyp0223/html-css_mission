@@ -2,9 +2,11 @@
 
 @import url("./init/normalize.css");
 @import url("./init/base.css");
+/* @import url("./init/base2.css"); */
 
 @import url("./common/a11y.css");
 @import url("./common/easings.css");
 
 @import url("./pages/iconfont.css");
 @import url("./pages/template.css");
+/* @import url("./pages/template2.css"); */

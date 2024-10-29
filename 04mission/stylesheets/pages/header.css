@@ -16,6 +16,8 @@
   height: 3.6rem;
   font-size: 12px;
   background: var(--color-gray-100);
+
+
 }
 
 .login-bar li:nth-of-type(1),
@@ -31,7 +33,10 @@
 
 .login-bar li:nth-of-type(1) {
   order: 3;
-  padding-left: 72.8rem;
+  /* padding-left: 72.8rem;
+  */
+  display: block;
+  flex-grow: 2rem;
 }
 
 .login-bar li:nth-of-type(2) {
