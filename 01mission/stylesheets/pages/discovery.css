@@ -41,72 +41,64 @@ h4 {
   line-height: 1.6rem;
 }
 
-/* // 오늘의 발견 섹션 영역 */
-
-
 
 /* 상품 이미지카드 위치 조정 */
 .cardWrap {
   padding-top: 2.4rem;
 }
 
-.imgCard a:not(:last-child) {
+.imgCard .card_link:not(:last-child) {
   margin-right: 1.6rem;
 }
 
-.imgCard:nth-child(2) a {
+.imgCard:nth-child(2) .card_link {
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
 }
 
-.imgCard:nth-child(1) a,
-.imgCard:nth-child(3) a:first-child {
+.imgCard:nth-child(1) .card_link,
+.imgCard:nth-child(3) .card_link:first-child {
   float: left;
   width: 502px;
   height: 310px;
   outline: 1px solid var(--color-gray-500);
 }
 
-.imgCard:nth-child(2) a,
-.imgCard:nth-child(3) a:not(:first-child) {
+.imgCard:nth-child(2) .card_link,
+.imgCard:nth-child(3) .card_link:not(:first-child) {
   float: left;
   width: 243px;
   height: 310px;
   outline: 1px solid var(--color-gray-500);
 }
 
-.imgCard a:hover,
-.imgCard a:focus,
-.imgCard:nth-child(3) a:hover,
-.imgCard:nth-child(3) a:focus {
+.imgCard .card_link:hover,
+.imgCard .card_link:focus,
+.imgCard:nth-child(3) .card_link:hover,
+.imgCard:nth-child(3) .card_link:focus {
   outline: 1px solid var(--color-blue-600);
 }
 
-/* // 상품 이미지카드 위치 조정 */
-
 
 /* 상품 이미지 위치 조정*/
-.imgCard:nth-child(1) img,
-.imgCard:nth-child(3) img:first-child {
+.imgCard:nth-child(1) .card_img,
+.imgCard:nth-child(3) .card_img:first-child {
   margin: 20px 28px;
   display: block;
 }
 
-.imgCard:nth-child(2) img,
-.imgCard:nth-child(3) a:not(:first-child) img {
+.imgCard:nth-child(2) .card_img,
+.imgCard:nth-child(3) .card_link:not(:first-child) .card_img {
   margin: 14px 22px 14px 23px;
 }
 
-/* // 상품 이미지 위치 조정*/
-
-
 
 /*  상품링크 */
-.imgCard a {
+.imgCard .card_link {
   position: relative;
 }
 
-.imgCard a::before {
+.imgCard .card_link::before {
   content: '';
   position: absolute;
   left: 20px;
@@ -117,7 +109,7 @@ h4 {
 }
 
 /* 구매하기 버튼*/
-.imgCard a::after {
+.imgCard .card_link::after {
   content: '구매하기';
   position: absolute;
   left: 20px;
@@ -138,8 +130,8 @@ h4 {
   /* opacity와 visibility에 대해 애니메이션 적용 */
 }
 
-.imgCard a:hover::after,
-.imgCard a:focus::after {
+.imgCard .card_link:hover::after,
+.imgCard .card_link:focus::after {
   /* .imgCard::after,
 .imgCard::after { */
   opacity: 1;
@@ -147,5 +139,3 @@ h4 {
   visibility: visible;
   /* 마우스를 올렸을 때 보이게 */
 }
-
-/* //구매하기 버튼*/
