@@ -41,18 +41,16 @@
       <nav>
         <div class="nav-link">
           <h3>생활용품</h3>
-          <a href="/">
-            <p>바로가기</p>
-          </a>
+          <a href="/">바로가기</a>
         </div>
         <ul class="nav-tag">
           <p class="nav-tag-txt">HOT키워드</p>
-          <li><a href="/">#바디오일</a></li>
-          <li><a href="/">#액체세제</a></li>
-          <li><a href="/">#화장실방향제</a></li>
-          <li><a href="/">#엠보싱물티슈</a></li>
-          <li><a href="/">#두피비듬샴푸</a></li>
-          <li><a href="/">#뽑아스는키친타올</a></li>
+          <li class="nav-tag-item"><a href="/">#바디오일</a></li>
+          <li class="nav-tag-item"><a href="/">#액체세제</a></li>
+          <li class="nav-tag-item"><a href="/">#화장실방향제</a></li>
+          <li class="nav-tag-item"><a href="/">#엠보싱물티슈</a></li>
+          <li class="nav-tag-item"><a href="/">#두피비듬샴푸</a></li>
+          <li class="nav-tag-item"><a href="/">#뽑아스는키친타올</a></li>
         </ul>
       </nav>
 
@@ -79,7 +77,95 @@
         <a href="#carousel_2" tabindex="-1"></a>
       </section>
       <!-- // 인디케이터 -->
-      <!-- // 캐러셀 -->
+
+      <!-- 강의 캐러셀UI
+      <article class="categoryUnit houseware">
+        <div class="categoryUnit__group">
+           wai-aria의
+          * role="region" => 탐색 가능함.
+              role="region"은 배너,컨턴트인포같은 랜드마크 역할에는 적절하지 않지만
+              해당 영역을 탐색할때 도움을 받을 수 있는 일반적인 랜드마트 역할이다.
+                region은 문서의 영역을 식별하는데 도움을 준다.
+
+          * aria-roledescription="carousel" => role에 대한 상세한 설명
+            보조기기가 region을 탐색가능한 영역으로 인식하고 carousel이라고 정확한 정보를 전달받게 됨.
+            carousel이 여러개일 경우 aria-label="생활용품 슬라이드 배너" 처럼 aria-label속성을 이용해서 상세히 설명해야함.
+
+          <div class="carousel" role="region" aria-roledescription="carousel" aria-label="생활용품 슬라이드 배너">
+            <div class="carousel__controls">
+               인디케이터 버튼이 aria-controls로 housewareSlideBanner라는 id를 가지고 있는 캐러셀 리스트영역을 컨트롤함
+                      따라서 캐러셀 목록의 id와 인디케이터의 aria-controls 속성의 값은 고유한 이름을 가져야함.
+              <button type="button" class="carousel_indicator is--active" aria-label="2개의 배너 중 1번 배너 보기"
+                aria-controls="housewareSlideBanner"></button>
+              <button type="button" class="carousel_indicator" aria-label="2개의 배너 중 2번 배너 보기"
+                aria-controls="housewareSlideBanner"></button>
+            </div>
+             aria-live="" 속성은 동작의 변화가 생겼을때 변화를 바로 읽어줄지 아닐지 결정하는 속성. 계속 읽으면 다른 컨텐츠 탐색에 방해가됨.
+            <div class="carousel__list" id="housewareSlideBanner" aria-live="off">
+
+              <div class="carousel__item is--active" role="group" aria-roledescription="slide"
+                aria-label="2개의 배너 중 1번째">
+                <a href="/" class="carousel__link">
+                  <figure class="carousel__slide">
+                     img의 alt에 이미지설명을 쓰는 대신 figcaption에 큰글자strong 작은글자span 태그로 설명을 적음.
+                    <img src="./assets/slides/houseware-downy.jpg" alt="" class="carousel__image">
+                    <figcaption class="carousel__caption">
+                      <strong class="carousel__caption--large">~~최초의 향균~~</strong>
+                      <span class="carousel__caption--small">!!!세균 냄새 걱정 없이!!!</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="2개의 배너 중 2번째">
+                <a href="/" class="carousel__link">
+                  <figure class="carousel__slide">
+                    img의 alt에 이미지설명을 쓰는 대신 figcaption에 큰글자strong 작은글자span 태그로 설명을 적음.
+                    <img src="./assets/slides/houseware-dandruff.jpg" alt="" class="carousel__image">
+                    <figcaption class="carousel__caption">
+                      <strong class="carousel__caption--large">미듬샴푸</strong>
+                      <span class="carousel__caption--small">미듬없이부드러운머릿결</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </article>
+      // 캐러셀 -->
+
+      <!--
+        상품 카드 링크
+
+      <div class="category__group">
+        <ul class="category__list">
+          <li class="category__item">
+            <a href="" class="category__link">
+              <div class="product">
+                <figure class="product__card">
+                  <img src="./assets/category/houseware/houseware-hairoil.jpg" alt="" class="product__img">
+                  <figcaption class="product__caption">로레알파리 엑스트라 헤어오일</figcaption>
+                </figure>
+                <div class="product_detail">
+
+                  sr-only로 스크린리더만 읽게구현,
+                  10,000과 원이 읽히는걸 방지하기 위해
+                  전체를 감싼 em태그에 role="text"속성 부여
+                  <span class="sr-only">판매가</span>
+                  <em class="product__price" role="text">10,000 <span class="price-won">원</span></em>
+                  <span class="sr-only">배송유형</span>
+                  <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      -->
+
 
       <!-- 상품 카드 -->
       <ul class="item-card-wrap">
@@ -176,12 +262,12 @@
         </div>
         <ul class="nav-tag">
           <p class="nav-tag-txt">HOT키워드</p>
-          <li><a href="/">#니트릴장갑</a></li>
-          <li><a href="/">#시리얼디스펜서</a></li>
-          <li><a href="/">#와플팬</a></li>
-          <li><a href="/">#텀블러</a></li>
-          <li><a href="/">#양념통</a></li>
-          <li><a href="/">#수세미</a></li>
+          <li class="nav-tag-item"><a href="/">#니트릴장갑</a></li>
+          <li class="nav-tag-item"><a href="/">#시리얼디스펜서</a></li>
+          <li class="nav-tag-item"><a href="/">#와플팬</a></li>
+          <li class="nav-tag-item"><a href="/">#텀블러</a></li>
+          <li class="nav-tag-item"><a href="/">#양념통</a></li>
+          <li class="nav-tag-item"><a href="/">#수세미</a></li>
         </ul>
       </nav>
 
