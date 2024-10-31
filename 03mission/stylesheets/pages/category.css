@@ -1,6 +1,5 @@
 /* 카테고리별 추천 광고상품 */
 .wrap {
-  /* width: 112rem; */
   width: 102rem;
   height: 148rem;
   margin: 10rem 13rem 42rem;
@@ -197,14 +196,14 @@ article:nth-of-type(2) .nav-tag li a {
   display: none;
 }
 
-.carousel li {
+.carousel .carousel_item {
   flex: 0 0 100%;
   scroll-snap-align: start;
   width: 32rem;
   position: relative;
 }
 
-.carousel img {
+.carousel .carousel_img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -225,12 +224,12 @@ article:nth-of-type(2) .nav-tag li a {
   gap: 8px;
 }
 
-.carousel-text-box strong {
+.carousel-text-box .carousel_title {
   font-size: 18px;
   font-weight: 700;
 }
 
-.carousel-text-box span {
+.carousel-text-box .carousel_content {
   font-size: 14px;
   font-weight: 400;
 }
@@ -239,34 +238,48 @@ article:nth-of-type(2) .nav-tag li a {
 /* 캐러셀-인디케이터 */
 .carousel-indicator {
   position: relative;
-  top: -40px;
+  top: -3.5rem;
+  left: -32rem;
 }
 
-.carousel-indicator a:nth-of-type(1)::before,
-.carousel-indicator a:nth-of-type(2)::before {
-  content: '';
+.indicator_link:first-child,
+.indicator_link:last-child {
   position: absolute;
   bottom: -3.6rem;
-  left: -17rem;
-  transform: translateX(-50%);
-  z-index: 1;
-
+  left: -17.5rem;
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
-  background-color: var(--color-gray-700);
-  transition: opacity ease 250ms;
+  background-color: var(--color-gray-600);
 }
 
-.carousel-indicator a:nth-of-type(2)::before {
-  left: -15rem;
+.indicator_link:last-child {
+  left: -15.5rem;
 }
 
-.carousel-indicator a:hover::before,
-.carousel-indicator a:focus::before {
+
+.indicator_link:first-child::before,
+.indicator_link:last-child:after {
   content: '';
-  opacity: 0.5;
+  position: absolute;
+  top: 0rem;
+  left: 31.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-600);
 }
+
+.indicator_link:hover::before,
+.indicator_link:focus::before,
+.indicator_link:hover::after,
+.indicator_link:focus::after,
+.indicator_link:hover,
+.indicator_link:focus {
+  content: '';
+  background-color: var(--color-gray-700)
+}
+
 
 
 /* 캐러셀 텍스트박스 */
