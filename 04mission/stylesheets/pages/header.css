@@ -16,27 +16,23 @@
   height: 3.6rem;
   font-size: 12px;
   background: var(--color-gray-100);
-
-
 }
 
 .login-bar li:nth-of-type(1),
-.login-bar li:nth-of-type(4) {
+ .login-bar li:nth-of-type(4) {
   padding: 0.5rem 0.8rem;
+  flex-grow: 1;
 }
 
 .login-bar li:nth-of-type(2),
 .login-bar li:nth-of-type(3),
 .login-bar li:nth-of-type(5) {
   padding: 0.5rem 0.8rem 0.5rem 0;
+  flex-grow: 1;
 }
 
 .login-bar li:nth-of-type(1) {
   order: 3;
-  /* padding-left: 72.8rem;
-  */
-  display: block;
-  flex-grow: 2rem;
 }
 
 .login-bar li:nth-of-type(2) {
@@ -53,6 +49,7 @@
 
 .login-bar li:nth-of-type(5) {
   order: 2;
+  flex-grow: 70;
 }
 
 
@@ -164,20 +161,21 @@
   grid-area: info;
   font-size: 1.2rem;
   line-height: 3;
-
   position: relative;
-  width: 4.6rem;
-  /* align-self: center; */
+  width: 5.6rem;
+  height: 11rem;
+  margin-right: 5.5rem;
 }
 
 .myCoupang-btn {
   position: absolute;
-  top: 2.7rem;
-  left: -10px;
+  top: 3rem;
+  left: 0px;
   user-select: none;
   background: url(../../assets/icon/my-coupang.svg) no-repeat 50% 0rem;
-  /* width: 4.6rem; */
-  height: 9.8rem;
+  width: 5.6rem;
+  height: 78%;
+  text-align: center;
 }
 
 .myCoupang-box {
@@ -224,7 +222,7 @@
   font-size: 12px;
   margin: 2.3rem 0 0 10rem;
   line-height: 6;
-
+  height: 100%;
   position: relative;
 }
 
@@ -244,7 +242,8 @@
 
 .cart-btn {
   position: absolute;
-  top: 1.7rem;
+  top: 1rem;
+  height: 65%;
 }
 
 .cart-txt-box {
